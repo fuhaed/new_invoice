@@ -1,0 +1,135 @@
+/* Base container styles */
+.invoice-container {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card component styling with reduced margins */
+.card {
+  border-radius: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 4px 4px 0 0;
+  padding: 8px 10px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+/* Form elements with consistent styling */
+.form-control, .btn {
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  border-color: #5e64ff;
+  box-shadow: none;
+}
+
+/* Table styling with compact layout */
+.table {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.table th, .table td {
+  padding: 6px;
+  vertical-align: middle;
+}
+
+/* Text alignment utilities */
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Payment method grid with cleaner appearance */
+.payment-methods-grid {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.payment-method-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.payment-method-card:hover {
+  border-color: #5e64ff;
+}
+
+.payment-method-card.selected {
+  background-color: #eef0ff;
+  border-color: #5e64ff;
+  font-weight: bold;
+}
+
+/* Form layout optimization */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Dialog styling */
+.modal-header, .modal-body, .modal-footer {
+  padding: 10px;
+}
+
+#print_content {
+  padding: 0;
+}
+
+/* RTL language support */
+body[data-language="ar"] .text-right {
+  text-align: left;
+}
+
+body[data-language="ar"] .text-left {
+  text-align: right;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 767px) {
+  .card-header {
+    padding: 6px 8px;
+  }
+  
+  .card-body {
+    padding: 8px;
+  }
+  
+  .table th, .table td {
+    padding: 4px;
+  }
+  
+  .payment-method-card {
+    padding: 8px;
+  }
+  
+  #inline_print_content {
+    height: 60vh;
+  }
+}

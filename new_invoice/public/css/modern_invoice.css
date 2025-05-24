@@ -1,0 +1,66 @@
+/* Modern Invoice Public CSS */
+
+/* RTL Support */
+html[dir="rtl"] .modern-invoice-page .page-header,
+html[dir="rtl"] .modern-invoice-page .form-group,
+html[dir="rtl"] .modern-invoice-page .summary-row,
+html[dir="rtl"] .modern-invoice-page .payment-method-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .modern-invoice-page .page-actions {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .modern-invoice-page .control-input-wrapper {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .modern-invoice-page .item-quantity-cell {
+  flex-direction: row-reverse;
+}
+
+/* Animation for new items */
+@keyframes pulse-highlight {
+  0% {
+    background-color: rgba(var(--primary-rgb), 0.1);
+  }
+  50% {
+    background-color: rgba(var(--primary-rgb), 0.3);
+  }
+  100% {
+    background-color: rgba(var(--primary-rgb), 0.1);
+  }
+}
+
+.pulse-highlight {
+  animation: pulse-highlight 1s ease;
+}
+
+/* Print Styles */
+@media print {
+  .modern-invoice-page .page-header,
+  .modern-invoice-page .barcode-group,
+  .modern-invoice-page .submit-container,
+  .modern-invoice-page .payment-methods-container {
+    display: none;
+  }
+  
+  .modern-invoice-page {
+    height: auto;
+  }
+  
+  .modern-invoice-page .invoice-container {
+    flex-direction: column;
+  }
+  
+  .modern-invoice-page .invoice-details-panel,
+  .modern-invoice-page .summary-panel {
+    width: 100%;
+    border: none;
+  }
+  
+  .modern-invoice-page .items-panel {
+    width: 100%;
+  }
+}
